@@ -1,13 +1,12 @@
 package lection1;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import static java.lang.Math.round;
 
 
-public class Lesson1 {
+public class Lection1 {
 //    public Lesson1() {
 //    }
 
