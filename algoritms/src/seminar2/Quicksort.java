@@ -45,12 +45,12 @@ public class Quicksort {
 
     public static void main(String[] var0) {
         int[] var1 = new int[]{8, 0, 4, 7, 3, 7, 10, 12, -3};
-        System.out.println("Р‘С‹Р»Рѕ");
+        System.out.println("Было");
         System.out.println(Arrays.toString(var1));
         byte var2 = 0;
         int var3 = var1.length - 1;
         quickSort(var1, var2, var3);
-        System.out.println("РЎС‚Р°Р»Рѕ");
+        System.out.println("Стало");
         System.out.println(Arrays.toString(var1));
     }
 }
