@@ -2,6 +2,7 @@ package lection1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.Math.round;
 
@@ -16,9 +17,28 @@ public class Lection1 {
 //            System.out.println(integer);
 //        }
 
-        int win = 11;
-        double chance = findSum(win);
-        System.out.println("Chance of " + win + " = " + String.format("%.2f", findSum(win) * 100) + " %");
+// Find sum
+//        int win = 11;
+//        double chance = findSum(win);
+//        System.out.println("Chance of " + win + " = " + String.format("%.2f", findSum(win) * 100) + " %");
+
+// Fibo
+//        AtomicInteger counter = new AtomicInteger(0);
+//        int fibo = fib(10, counter);
+//        System.out.println("Fib number: " + fibo);
+//        System.out.println("Counter: " + counter.get());
+//
+//        counter = new AtomicInteger(0);
+//        fibo = fib(11, counter);
+//        System.out.println("Fib number: " + fibo);
+//        System.out.println("Counter: " + counter.get());
+//
+//        counter = new AtomicInteger(0);
+//        fibo = fib(12, counter);
+//        System.out.println("Fib number: " + fibo);
+//        System.out.println("Counter: " + counter.get());
+
+// Something
 
 
     }
@@ -69,5 +89,12 @@ public class Lection1 {
         return ((double) successResult) / ((double) count);
     }
 
+    public static int fib(int position, AtomicInteger counter) {
+        counter.incrementAndGet();
+        if (position == 1 || position == 2) {
+            return 1;
+        }
+        return fib(position - 1, counter) + fib(position - 2, counter);
+    }
 
 }
