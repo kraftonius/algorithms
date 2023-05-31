@@ -2,9 +2,8 @@ package seminar2;
 
 import java.util.Arrays;
 
-public class QuickSort {
-    public QuickSort() {
-    }
+public class Quicksort {
+
 
     public static void quickSort(int[] var0, int var1, int var2) {
         if (var0.length != 0) {
@@ -14,12 +13,12 @@ public class QuickSort {
                 int var5 = var1;
                 int var6 = var2;
 
-                while(var5 <= var6) {
-                    while(var0[var5] < var4) {
+                while (var5 <= var6) {
+                    while (var0[var5] < var4) {
                         ++var5;
                     }
 
-                    while(var0[var6] > var4) {
+                    while (var0[var6] > var4) {
                         --var6;
                     }
 
@@ -54,3 +53,4 @@ public class QuickSort {
         System.out.println("РЎС‚Р°Р»Рѕ");
         System.out.println(Arrays.toString(var1));
     }
+}
