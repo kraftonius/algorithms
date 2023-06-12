@@ -4,7 +4,7 @@ public class HashMap<K, V> {
     private Node<K, V>[] hashTable = new Node[16];
 
 
-    public V objectPut(K key, V value) { // ЕСЛИ по ключу НЕ пусто Добавляет пару ключ-значение, ИНАЧЕ возвращает null
+    public V objectPut(K key, V value) { // ЕСЛИ по ключу пусто Добавляет пару ключ-значение, ИНАЧЕ возвращает null
         Node<K, V> putNode = new Node<>(key, value);
         int i = putNode.key.hashCode() % 16;
         if (hashTable[i] != null) {
@@ -65,7 +65,7 @@ public class HashMap<K, V> {
         return null;
     }
 
-    public int size() {
+    public int size() { // Считает элементы, возвращает количество элементов
         int count = 0;
         for (int i = 0; i < 16; i++) {
             if (hashTable[i] != null) {
@@ -79,7 +79,7 @@ public class HashMap<K, V> {
         return count;
     }
 
-    public boolean keyExists(K key) {
+    public boolean keyExists(K key) { // проверяет, есть ли элемент с таким ключом
         int i = key.hashCode() % 16;
         if (hashTable[i] != null){
             for(Node<K, V> currentNode = hashTable[i]; currentNode != null; currentNode = currentNode.nextnode){
@@ -91,7 +91,7 @@ public class HashMap<K, V> {
         return false;
     }
 
-    public boolean valueExists(V value) {
+    public boolean valueExists(V value) { // проверяет, есть ли элемент с таким значением
         for (int i = 0; i < 16; i++) {
             if (hashTable[i] != null) {
                 for (Node<K, V> currentNode = hashTable[i]; currentNode != null; currentNode = currentNode.nextnode) {
